@@ -1,0 +1,17 @@
+@import "../base/mixins";
+@import "../variables";
+
+.categories {
+    padding-right: 1.3rem;
+    padding-left: 1.3rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(var(--category-min-width, 31rem), 1fr));
+        gap: var(--categories-gap, 3rem);
+
+        @media (max-width: $screen-mobile) {
+            --category-min-width: 21rem;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// General rules for lists
+
+ul {
+    padding-inline-start: 2rem;
+    
+    &[class] {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ::marker {
+        color: red;
+    }
+
+    li {
+        &::marker {
+            color: var(--color-highlight);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}

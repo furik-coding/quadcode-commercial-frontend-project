@@ -1,0 +1,17 @@
+.taglink {
+    display: inline-flex;
+    align-items: center;
+    padding: .9rem 2.5rem;
+    border-radius: 1.8rem;
+    background: rgba(#979797, 20%);
+    color: var(--color-text-light);
+    font-size: var(--typo-base);
+
+    &:hover {
+        filter: contrast(1.5);
+    }
+
+    &__icon {
+        margin-right: 2rem;
+    }
+}

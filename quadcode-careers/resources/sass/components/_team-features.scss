@@ -1,0 +1,28 @@
+.team-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: var(--categories-gap, 5rem 3rem);
+
+    &__item {}
+
+    &__item-title {
+        margin-bottom: 1rem;
+        color: var(--color-highlight);
+        font-size: var(--typo-subtitle);
+        font-weight: bold;
+    }
+
+    &__item-description {
+        font-size: var(--typo-caption)
+    }
+}
+
+.team-features-slider-nav {
+    @media (min-width: $screen-tablet) {
+        display: none;
+    }
+
+    .slick-slide {
+        margin: 0 .5rem;
+    }
+}

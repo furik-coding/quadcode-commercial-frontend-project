@@ -1,0 +1,154 @@
+@import "../variables";
+
+.slider {
+
+}
+
+.slider-wrap {
+    position: relative;
+}
+
+.slider-content {
+    @media (min-width: $screen-tablet) {
+        padding: 0 5rem;
+    }
+
+    @media (min-width: $screen-desktop) {
+        padding: 0 10rem;
+    }
+}
+
+.slider-nav {
+    margin-top: 4rem;
+
+    @media (min-width: $screen-desktop) {
+        margin-top: 5.7rem;
+    }
+
+    &__item {
+        max-width: 14rem;
+        margin: 0 1.5rem;
+        cursor: pointer;
+    }
+
+    &__item-marker {
+        height: 0.5rem;
+        background-color: var(--current-slide-marker-color, var(--color-line));
+        transition: background-color .25s;
+    }
+
+    .slick-track {
+        display: flex;
+        justify-content: center;
+        transform: none !important; // smoother view
+
+        &:before,
+        &:after {
+            display: none; // we dont need it
+        }
+
+        // Current element
+        .slick-current {
+            --current-slide-marker-color: var(--color-highlight); //  &__item-marker
+            --current-slide-text-color: var(--color-text-primary); // &__item-name
+        }
+    }
+}
+
+.slider-arrow {
+    --arrow-offset-x: calc(var(--container-padding) * -1);
+
+    position: absolute;
+        top: var(--arrow-offset-y);
+        width: 55px;
+        height: 55px;
+        display: block;
+        background-color: var(--color-highlight);
+        background-image: url("/files/icons/left_white_arr.svg");
+        background-size: auto 14px;
+        background-repeat: no-repeat;
+        background-position: 20px 21px;
+        transition: .3s all ease;
+        cursor: pointer;
+
+
+        @media (max-width: $screen-tablet) {
+            display: none;
+        }
+
+
+
+        @media (min-width: $screen-tablet) {
+            --arrow-offset-x: calc((var(--container-padding) + 2vw) * -1);
+            --arrow-offset-y: 50%;
+        }
+
+        @media (min-width: $screen-desktop) {
+            --arrow-offset-x: -7rem;
+        }
+
+        &.as-prev-btn {
+            left: var(--arrow-offset-x);
+            transform: translateY(-25px);
+            background-position: 20px center;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                max-height: 0;
+                max-width: 0;
+                top:26.5px;
+                left: 21px;
+                background: #fff;
+                border: 1px solid #fff;
+                border-right: 0;
+                border-left: 0;
+                transition: 0.3s all ease;
+                display: block;
+            }
+
+            &:hover {
+                background-position: 16px center;
+
+                &::before {
+                    max-width: 15px;
+                    left: 18px;
+                }
+            }
+        }
+
+        &.as-next-btn {
+            right: var(--arrow-offset-x);
+            transform: translateY(-25px);
+            background-image: url("/files/icons/right_white_arr.svg");
+            background-position: 25px center;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                max-height: 0;
+                max-width: 0;
+                top:26.5px;
+                right: 25px;
+                background: #fff;
+                border: 1px solid #fff;
+                border-right: 0;
+                border-left: 0;
+                transition: 0.3s all ease;
+                display: block;
+            }
+
+            &:hover {
+                background-position: 29px center;
+
+                &::before {
+                    max-width: 15px;
+                    right: 20px;
+                }
+            }
+        }
+}

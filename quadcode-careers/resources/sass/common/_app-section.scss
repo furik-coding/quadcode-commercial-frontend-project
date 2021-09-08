@@ -1,0 +1,46 @@
+.app-section {
+    padding-top: var(--section-top-offset, 2rem);
+    background-color: var(--section-bg-color, var(--color-app-background));
+    background-image: var(--section-bg, none);
+    background-size: cover;
+    color: var(--section-text-color, var(--color-text-primary));
+
+    &.is-rounded {
+        border-radius: 2rem;
+    }
+
+    &.is-full-height {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        height: clamp(60rem, 100vh, 108rem);
+    }
+
+    &__inner {
+        // padding-top: var(--section-top-offset, 2rem);
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @media (min-width: $screen-tablet) {
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: $screen-desktop) {
+            margin-bottom: 3.3rem;
+        }
+        
+        h1 {
+            font-size: var(--typo-headline);
+            font-weight: var(--section-header-weight, 400);
+        }
+    }
+
+    &:first-child:not(.welcome) {
+        @media (max-width: $screen-mobile) {
+            margin-top: 6rem;
+        }
+    }
+}

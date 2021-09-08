@@ -1,0 +1,62 @@
+.app-lang {
+    position: relative;
+    justify-self: start;
+    padding: 1rem 0;
+    user-select: none;
+
+    @media (max-width: $screen-desktop) {
+        align-self: end;
+        justify-self: start;
+    }
+
+    &__current {
+        display: flex;
+        color: var(--text-color, var(--color-text-light));
+    }
+
+    &__arrow {
+        margin-right: 1rem;
+        transition: transform .3s;
+    }
+
+    &__listing {
+        position: absolute;
+        max-height: 0;
+        background: var(--color-app-background);
+        border-radius: 4px;
+        box-shadow: var(--shadow-1);
+        color: var(--color-text-primary);
+        overflow: hidden;
+        transition: max-height .3s;
+
+        @media (max-width: $screen-desktop) {
+            bottom: 0;
+        }
+
+        @media (min-width: $screen-desktop) {
+            top: 100%;
+        }
+    }
+
+    &__locale {
+        display: flex;
+        padding: 1rem 2rem;
+
+        &:hover {
+            background-color: rgb(240, 242, 245);
+        }
+    }
+
+
+    &:hover &__listing {
+        max-height: 50vh;
+
+        @media (max-width: $screen-tablet) {
+            overflow-y: auto;
+        }
+    }
+
+    &:hover &__arrow {
+        transform: rotate(-180deg);
+    }
+}

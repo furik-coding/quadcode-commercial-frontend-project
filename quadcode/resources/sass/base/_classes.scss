@@ -1,0 +1,15 @@
+@import "../variables";
+
+// Class generator for `background-color` property
+@each $color, $colorCode in $pallete {
+    .background--#{$color} {
+        background-color: var(--color-+$color);
+    }
+}
+
+// Class generator for `color` property
+@each $color, $colorCode in $pallete {
+    .color--#{$color} {
+        color: var(--color-+$color);
+    }
+}

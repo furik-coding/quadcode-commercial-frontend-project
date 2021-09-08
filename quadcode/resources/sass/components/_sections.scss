@@ -1,0 +1,229 @@
+// used in index.html
+.solid-set-section {
+    margin-top: -2rem;
+
+    @media (max-width: $screen-tablet) {
+        --section-padding: 6rem 0;
+
+        height: clamp(60rem, 70rem, 108rem);
+        background-position: 90% 80%;
+    }
+
+    @media (min-width: $screen-desktop) {
+        height: clamp(60rem, 100vh, 108rem);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: center;
+        height: 100%;
+
+        @media (max-width: $screen-tablet) {
+            grid-template-columns: 100%;
+            align-content: end;
+        }
+    }
+
+    .app-section {
+        &__header {
+            text-align: left;
+
+            @media (min-width: $screen-tablet) {
+                max-width: 80%;
+            }
+        }
+
+        &__text {
+            .link {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    &.has-left-align .app-section__text {
+        text-align: left;
+    }
+
+    &.has-right-align .app-section__text {
+        text-align: right;
+    }
+}
+
+.new-era {
+    .app-section {
+        &__inner {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+
+            img {
+                margin-top: 2rem;
+            }
+            
+
+            @media (min-width: $screen-tablet) {
+                text-align: center;
+
+                img {
+                    margin-top: 10rem;
+                }
+            }
+
+            
+        }
+    }
+}
+
+.get-in-touch {
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        @media (min-width: $screen-tablet) {
+            justify-content: center;
+        }
+    }
+
+    .app-section {
+        &__inner {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        &__header {
+            text-align: center;
+        }
+    }
+
+    &.has-left-align-mobile {
+        @media (max-width: $screen-mobile) {
+            .app-section {
+                &__inner {
+                    align-items: flex-start;
+                }
+        
+                &__header {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .like-btn {
+        margin-top: 4rem;
+    }
+}
+
+// used in technologies.html
+.welcome.techs-welcome {
+    @media (min-width: $screen-tablet) and (max-width: $screen-desktop) {
+        --welcome-height-target: calc(100vh + var(--overlap-value));
+        --welcome-height-max: calc(60rem + var(--overlap-value));
+
+        height: clamp(40rem,var(--welcome-height-target),var(--welcome-height-max))
+    }
+
+    @media (min-width: $screen-desktop) {
+        .welcome__inner {
+            padding-left: calc(100% / 12 * 7);
+        }
+
+        .welcome__text {
+            text-align: left;
+        }
+    }
+
+}
+
+.techs-decor-image {
+    @media (max-width: $screen-tablet) {
+        display: none;
+    }
+}
+
+.latest-techs {
+    .app-section {
+        &__header {
+            color: var(--color-highlight);
+        }
+
+        &__text {
+            max-width: 100%;
+            text-align: center;
+
+            @media (max-width: $screen-tablet) {
+                text-align: left;
+            }
+        }
+    }
+
+    &__lists {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 4rem;
+        max-width: 60rem;
+        margin: auto;
+        margin-top: 10rem;
+
+        @media (min-width: $screen-tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__list-item {
+        margin: 0 0 1rem;
+    }
+
+    &__list-title {
+        margin-bottom: 2rem;
+        color: var(--color-highlight);
+        font-size: var(--typo-headline);
+        font-weight: var(--section-header-weight, 600);
+    }
+}
+
+
+// used in company.html
+.developed-by {
+    padding-bottom: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        height: 100%;
+        margin-top: max(40rem, 30vh);
+    }
+
+    &__header {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        
+    }
+
+    &__text {
+        margin-top: 4rem;
+    }
+}
+
+.developed-by-logos {
+    .developed-by {
+        &__logos {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 7rem;
+            
+            img {
+                margin: 2.5rem 3.5rem;
+            }
+        }
+    }
+}

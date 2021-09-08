@@ -1,0 +1,92 @@
+export default {
+  'main.intro.title': '<b>A plataforma de negociação perfeita</b> para começar a corretagem.',
+  'main.intro.text':
+    'Oferecemos uma plataforma de negociação exclusiva de alta qualidade, com um desempenho confiável e que define o padrão de como um aplicativo de negociação moderno deve funcionar.',
+  'main.intro.specs': 'Veja as especificações da plataforma aqui.',
+  'main.features.title': 'O que torna a plataforma de negociação QuadCode a melhor do mercado?',
+  'main.features.item1.text': 'Interface confortável e moderna voltada para o usuário',
+  'main.features.item2.text': 'Soluções tecnológicas exclusivas de ponta',
+  'main.features.item3.text': 'Um conjunto completo de recursos e opções para personalização',
+  'main.poweredby.text':
+    'Estamos orgulhosos de ter o selo QuadCode nas plataformas de negociação das empresas que verdadeiramente impulsionam o setor.',
+
+  'products.intro.title': 'Conheça <b>a melhor plataforma de negociação</b> do setor',
+  'products.environment.title': 'Ambiente de negociação <b>multiferramentas</b>',
+  'products.environment.text':
+    'A plataforma atende a todos os requisitos de necessidades dos traders e níveis de habilidade, incluindo uma ampla gama de instrumentos e ferramentas, de opções e CFDs a Forex e commodities.',
+  'products.performance.title': 'Desempenho <b>multiplataformas</b>',
+  'products.performance.text':
+    'Não importa o seu estilo de investimento, seja você um investidor em tempo integral ou um trader sempre em movimento, a plataforma está sempre disponível para a execução imediata. No aplicativo para desktop ou dispositivos móveis, a QuadCode adapta o processo de negociação ao estilo de vida do seu cliente.',
+  'products.features.list1.title': 'Ferramentas de múltiplos ativos',
+  'products.features.list1.subtitle': 'Mais de 400 ativos de negociação',
+  'products.features.list1.item1': 'Forex',
+  'products.features.list1.item2': 'CFDs',
+  'products.features.list1.item3': 'ETFs',
+  'products.features.list1.item4': 'Commodities',
+  'products.features.list2.title': 'Producto de alta tecnología',
+  'products.features.list2.item1': 'Tecnología Web GL',
+  'products.features.list2.item2': 'Aplicativo multiplataformas',
+  'products.features.list3.title': 'Sala de negociação',
+  'products.features.list3.item1': 'Gráficos ajustáveis',
+  'products.features.list3.item2': 'Ferramentas gráficas precisas',
+  'products.features.list3.item3': 'Conjunto de indicadores',
+  'products.features.list3.item4': 'Widgets de interface',
+  'products.features.list3.item5': 'Interface de telas múltiplas',
+  'products.features.list3.item6': 'Chat',
+  'products.customization.title': '<b>Personalização</b> da sala de negociação',
+  'products.customization.text':
+    'Impressione os traders com sua marca. A plataforma foi projetada para prever as necessidades de personalização para que você possa torná-la sua, com a identidade da sua marca.',
+  'products.customization.brand': 'Posicionamento do logotipo da marca',
+  'products.customization.color': 'Cor do painel',
+  'products.customization.menu': 'Configurações de menu personalizadas',
+  'products.sandbox.title': 'Quadcode Sandbox',
+  'products.sandbox.text':
+    'A QuadCode Sandbox é uma plataforma que permite criar ambientes de teste independentes que são isolados uns dos outros. Com este produto, você pode obter uma cópia da plataforma inteira com base na arquitetura de microsserviço em seu ambiente de teste particular.',
+
+  'menu.company': 'Empresa',
+  'menu.product': 'Produtos',
+  'menu.technologies': 'Tecnologias',
+  'menu.contacts': 'Contato',
+  'lang.en': 'English',
+  'lang.de': 'Deutsch',
+  'lang.es': 'Español',
+  'lang.fr': 'Français',
+  'lang.it': 'Italiano',
+  'lang.pt': 'Português',
+  'lang.cn': '中文',
+  'technologies.title': 'De OpenGL a Metal',
+  'technologies.description':
+    'Seguimos os mais recentes requisitos tecnológicos de líderes em rápida evolução na fabricação de dispositivos móveis que exigem novas abordagens para o desenvolvimento de softwares. Nosso aplicativo de negociação contém as tecnologias OpenGL e Metal, com movimento contínuo entre elas, para que o aplicativo se adapte a qualquer dispositivo móvel, mesmo que ele seja de um modelo antigo.',
+  'technologies.web-assembly.title': 'WebAssembly',
+  'technologies.web-assembly.item-1':
+    'Taxas de quadros suaves em uma ampla variedade de dispositivos',
+  'technologies.web-assembly.item-2':
+    'Base de fonte única com o aplicativo instalado, os recursos estão sempre sincronizados',
+  'technologies.native-application.title': 'Aplicativo instalado',
+  'technologies.native-application.item-1': 'Baixos requisitos de hardware',
+  'technologies.native-application.item-2': 'Ótima duração da bateria',
+  'technologies.native-application.item-3': 'Ótimos visuais com Direct3D 11 e Metal',
+  'technologies.pwa.title': 'PWA',
+  'technologies.pwa.item-1': 'Ciclo de lançamento rápido',
+  'technologies.pwa.item-2': 'Sala de negociação de desktop no iPad',
+  'technologies.kubernetes.title': 'Kubernetes',
+  'technologies.kubernetes.item-1': 'Grande adaptabilidade e confiabilidade',
+  'technologies.kubernetes.item-2': 'Custos de hardware reduzidos',
+  'company.item-1.title': 'Equipe',
+  'company.item-1.text':
+    'Somos uma equipe de mais de 250 especialistas no desenvolvimento de software de alta qualidade para o setor de negociação e investimentos. Com 6 anos de experiência de mercado, criamos produtos para nossos clientes que superam as soluções técnicas existentes em uma variedade de parâmetros.',
+  'company.item-2.title': 'Visão',
+  'company.item-2.text':
+    'Acreditamos que a nossa abordagem meticulosa em todas as fases do desenvolvimento, desde a ideia e o protótipo até ao teste e lançamento, permite-nos criar uma excelente referência no campo das tecnologias e soluções para o mundo das negociações.',
+  'company.item-3.title': 'Parceiros',
+  'company.item-3.text':
+    'Graças à estreita colaboração com os nossos parceiros e à sinergia dos nossos produtos, oferecemos soluções completas para a corretagem de qualquer nível.',
+  'company.partners.text':
+    'Estamos orgulhosos de ter o selo QuadCode nas plataformas de negociação das empresas que verdadeiramente impulsionam o setor.',
+  developers: 'desenvolvedores',
+  designers: 'designers',
+  'qa-engineers': 'engenheiros de QA',
+  'scroll-down': 'Rolar para baixo',
+  'scroll-up': 'Rolar para cima',
+  'seo.default.title': 'QuadCode',
+};

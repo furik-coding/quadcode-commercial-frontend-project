@@ -1,0 +1,79 @@
+@import "../variables";
+
+.vacancy {
+    --vacancy-grid-columns: 1fr 1fr;
+    --vacancy-gap: 1rem 2rem;
+    --vacancy-item-min-height: 0;
+    --vacancy-padding: 1.4rem 0;
+    --vacancy-text-align: left;
+
+    @media (min-width: $screen-tablet) {
+        --vacancy-grid-columns: 1fr 17rem 12rem;
+        --vacancy-gap: 0 5rem;
+        --vacancy-item-min-height: 7.5rem;
+        --vacancy-padding: 2.5rem 0;
+        --vacancy-text-align: right;
+    }
+
+    @media (min-width: $screen-desktop) {
+        --vacancy-padding: 1rem 0;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: var(--vacancy-grid-columns);
+        gap: var(--vacancy-gap);
+        align-items: center;
+        min-height: var(--vacancy-item-min-height); 
+        padding: var(--vacancy-padding);
+
+        &:not(:first-child) {
+            border-top: 1px solid var(--color-line);
+        }
+
+        &.as-heading {
+            min-height: 0;
+            padding: 1rem 0;
+            font-size: var(--typo-caption);
+            font-weight: 400;
+
+            @media (max-width: $screen-desktop) {
+                & > :not(:first-child) {
+                    display: none;
+                }
+            }
+        }
+
+        &:hover {
+            --text-color: var(--color-highlight);
+        }
+    }
+
+    :not(.as-heading) > &__job {
+        color: var(--text-color, var(--color-text-primary));
+        font-size: var(--typo-subtitle);
+        font-weight: 600;
+
+        @media (max-width: $screen-tablet) {
+            grid-column-end: span 2;
+        }
+    }
+
+    &__category,
+    &__location {
+        text-align: var(--vacancy-text-align);
+
+        @media (max-width: $screen-tablet) {
+            align-self: start;
+            font-size: 1.4rem;
+        }
+    }
+
+    // if there is no location column
+    &__category {
+        .as-heading &:last-child,
+        &:last-child {
+            grid-column-end: span 2;
+        }
+    }
+}

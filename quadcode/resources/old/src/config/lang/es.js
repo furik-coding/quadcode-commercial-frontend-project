@@ -1,0 +1,92 @@
+export default {
+  'main.intro.title': '<b>La plataforma de trading perfecta</b> para empezar a invertir.',
+  'main.intro.text':
+    'Ofrecemos una plataforma de trading única de alta calidad con un rendimiento inmejorable que establece un estándar en cómo una aplicación de trading modera debe funcionar.',
+  'main.intro.specs': 'Vea las especificaciones de la plataforma aquí..',
+  'main.features.title':
+    '¿Qué hace que la plataforma de trading QuadCode sea la mejor del mercado?',
+  'main.features.item1.text': 'Moderna, orientada al usuario, interfaz ergonómica',
+  'main.features.item2.text': 'Soluciones tecnológicas únicas y punteras',
+  'main.features.item3.text': 'Una suite completa de funcionalidades y opciones de personalización',
+  'main.poweredby.text':
+    'Estamos orgullosos de contar con el distintivo de QuadCode en plataformas de trading de verdaderas compañías impulsoras de la industria.',
+
+  'products.intro.title': 'Explora <b>la mejor plataforma de trading</b> de la industria',
+  'products.environment.title': 'Entorno de trading <b>multiherramienta</b>',
+  'products.environment.text':
+    'La plataforma cumple con todos los requisitos de las necesidades de nuestros traders y niveles de habilidad, al incluir un amplio rango de instrumentos y herramientas desde CFDs hasta Forex y materias primas.',
+  'products.performance.title': 'Rendimiento <b>multiplataforma</b>',
+  'products.performance.text':
+    'Sin importar su estilo de inversión, ya sea que usted sea un inversor a tiempo completo o un trader ‘on-the-go’, la plataforma es siempre de ejecución inmediata. Tanto en la app de escritorio o en la de móvil, QuadCode adapta el proceso de trading al estilo de vida de su cliente.',
+  'products.features.list1.title': 'Herramientas multiactivo',
+  'products.features.list1.subtitle': 'Más de 400 activos de trading',
+  'products.features.list1.item1': 'Forex',
+  'products.features.list1.item2': 'CFDs',
+  'products.features.list1.item3': 'ETFs',
+  'products.features.list1.item4': 'Materias primas',
+  'products.features.list2.title': 'Producto de alta tecnología',
+  'products.features.list2.item1': 'Tecnología Web GL',
+  'products.features.list2.item2': 'App multiplataforma',
+  'products.features.list3.title': 'Sala de Operaciones',
+  'products.features.list3.item1': 'Gráficos ajustables',
+  'products.features.list3.item2': 'Herramientas gráficas precisas',
+  'products.features.list3.item3': 'Conjunto de indicadores',
+  'products.features.list3.item4': 'Widgets de interfaz',
+  'products.features.list3.item5': 'Interfaz multipantalla',
+  'products.features.list3.item6': 'Chat',
+  'products.customization.title': '<b>Personalización</b> de la Sala de Operaciones',
+  'products.customization.text':
+    'Impresiona a los traders con tu marca. La plataforma ha sido diseñada para prever las necesidades de personalización y para que pueda hacerla suya con su propio ‘branding’.',
+  'products.customization.brand': 'Colocación del logo de marca',
+  'products.customization.color': 'Color del panel',
+  'products.customization.menu': 'Ajustes de menu personalizados',
+  'products.sandbox.title': 'Sandbox de QuadCode',
+  'products.sandbox.text':
+    'QuadCode Sandbox es una plataforma que le permite crear entornos de prueba independientes que están aislados entre sí. Con este producto, puede obtener una copia de toda la plataforma basada en la arquitectura de microservicios en su entorno de prueba privado.',
+  'menu.company': 'Compañía',
+  'menu.product': 'Productos',
+  'menu.technologies': 'Technologías',
+  'menu.contacts': 'Contacto',
+  'lang.en': 'English',
+  'lang.de': 'Deutsch',
+  'lang.es': 'Español',
+  'lang.fr': 'Français',
+  'lang.it': 'Italiano',
+  'lang.pt': 'Português',
+  'lang.cn': '中文',
+  'technologies.title': 'Desde OpenGL a Metal',
+  'technologies.description':
+    'Seguimos las últimas innovaciones tecnológicas de los líderes que evolucionan rápidamente en la fabricación de móviles, demandando nuevos enfoques de desarrollo. Nuestra app de trading contiene tecnologías tanto OpenGL como Metal con una fluidez total entre ellas para que la app se adapte a cualquier dispositivo móvil, incluso en los modelos más antiguos.',
+  'technologies.web-assembly.title': 'WebAssembly',
+  'technologies.web-assembly.item-1':
+    'Frecuencia de frames suave en una amplia variedad de dispositivos',
+  'technologies.web-assembly.item-2':
+    'Base de una sola fuente con aplicación nativa — las funcionalidades siempre están sincronizadas',
+  'technologies.native-application.title': 'Aplicación Nativa',
+  'technologies.native-application.item-1': 'Bajos requisitos de hardware',
+  'technologies.native-application.item-2': 'Gran duración de batería',
+  'technologies.native-application.item-3': 'Grandes gráficos con Direct3D 11 y Metal',
+  'technologies.pwa.title': 'PWA',
+  'technologies.pwa.item-1': 'Ciclo de liberación rápida',
+  'technologies.pwa.item-2': 'Sala de Operaciones de escritorio en el iPad',
+  'technologies.kubernetes.title': 'Kubernetes',
+  'technologies.kubernetes.item-1': 'Gran escalabilidad y fiabilidad',
+  'technologies.kubernetes.item-2': 'Costes de hardware reducidos',
+  'company.item-1.title': 'Equipo',
+  'company.item-1.text':
+    'Somos un equipo de más de 250 expertos en desarrollo de software de alta calidad para la industria del trading y la inversión. Con 6 años de experiencia en el mercado sobre nuestras espaldas, creamos productos para nuestros clientes que superan las soluciones técnicas existentes en gran variedad de parámetros.',
+  'company.item-2.title': 'Visión',
+  'company.item-2.text':
+    'Creemos que nuestro meticuloso enfoque en cada etapa del desarrollo, desde la idea y el prototipo hasta las pruebas y el lanzamiento, nos permiten crear un excelente punto de referencia en el campo de las tecnologías y soluciones para el mundo del trading.',
+  'company.item-3.title': 'Socios',
+  'company.item-3.text':
+    'Gracias a una estrecha colaboración con nuestros socios y la sinergia de nuestros productos, ofrecemos soluciones apropiadas para inversión de cualquier nivel.',
+  'company.partners.text':
+    'Estamos orgullosos de contar con el distintivo de QuadCode en plataformas de trading de verdaderas compañías impulsoras de la industria.',
+  developers: 'Desarrolladores',
+  designers: 'Diseñadores',
+  'qa-engineers': 'Ingenieros de QA',
+  'scroll-down': 'Desplazarse Abajo',
+  'scroll-up': 'Desplazarse Arriba',
+  'seo.default.title': 'QuadCode',
+};

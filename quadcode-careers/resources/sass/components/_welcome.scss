@@ -1,0 +1,115 @@
+@import "../variables";
+
+.welcome {
+    --welcome-height-target: 100vh;
+    --welcome-height-max: 72rem;
+
+    position: relative;
+    height: clamp(60rem, var(--welcome-height-target), var(--welcome-height-max));
+    background-color: rgba(#0F161D, 60%);
+    background-image: linear-gradient(rgba(#0F161D, 60%), rgba(#0F161D, 60%)), var(--welcome-bg, none);
+    background-size: cover;
+
+    @media (min-width: $screen-tablet) {
+        --welcome-height-target: 100vh;
+        --welcome-height-max: 108rem;
+    }
+
+    &__video-wrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba(19, 44, 63, .6);
+        }
+
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 100%;
+        max-width: 100%;
+        line-height: 1.625;
+        text-align: center;
+    }
+
+    &__header {
+        margin-bottom: 5rem;
+        color: var(--color-text-light);
+        font-size: var(--header-font-size, var(--typo-headline2));
+        text-align: center;
+
+        br {
+            display: none;
+        }
+    }
+
+    &__search {
+        width: 100%;
+    }
+
+    &__call-to-scroll {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .action-marker {
+            svg {
+                width: 14px;
+                margin-right: -1px;
+                transition: 0.3s all ease;
+                transform: translateY(0%);
+            }
+        
+            &::before {
+                content: "";
+                position: absolute;
+                height: 0px;
+                width: 2px;
+                top: 49%;
+                left: calc(33% + 9px);
+                background: #fff;
+                transition: 0.3s all ease;
+            }
+        
+            &:hover {
+
+                svg {
+                    margin-bottom: -20%;
+                }
+        
+                &::before {
+                    height: 15px;
+                    transform: translateY(-45%);
+                }
+            }
+        }
+    }
+}

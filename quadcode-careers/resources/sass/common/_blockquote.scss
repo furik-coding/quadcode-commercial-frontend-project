@@ -1,0 +1,23 @@
+.blockquote {
+    margin: 0;
+    padding-top: var(--blockquote-padding-top, 11rem);
+    padding-left: var(--blockquote-padding-left, 7.5rem);
+    background-image: var(--blockquote-bg, url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='216px' height='185px' viewbox='0 0 216 185' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='quote_symbol'%3E%3Cpath d='M47.52 160.95C70.9714 160.95 89.4857 141.833 89.4857 119.017C89.4857 96.2 73.44 80.1667 53.0743 80.1667C48.7543 80.1667 43.8171 80.7833 42.5829 81.4C46.2857 60.4333 67.2686 35.15 87.0172 23.4333L57.3943 0C23.4514 24.05 0 62.2833 0 104.833C0 140.6 22.2171 160.95 47.52 160.95ZM161.691 160.95C185.143 160.95 203.657 141.833 203.657 119.017C203.657 96.2 187.611 80.1667 167.246 80.1667C162.926 80.1667 157.989 80.7833 156.754 81.4C160.457 60.4333 181.44 35.15 201.189 23.4333L171.566 0C137.623 24.05 114.171 62.2833 114.171 104.833C114.171 140.6 136.389 160.95 161.691 160.95Z' transform='matrix(1 0 0 1 -2.842171E-14 -2.2737368E-13)' id='“' fill='%23F8FAFB' stroke='none' /%3E%3C/g%3E%3C/svg%3E"));
+    background-repeat: no-repeat;
+
+
+    &__text {
+        color: var(--color-blockquote-text, #323E48);
+    }
+
+    &__author {
+        margin-top: var(--blockquote-author-offset, 4.6rem);
+        font-size: var(--typo-subtitle);
+        color: var(--color-text-primary, #2A3540);
+    }
+
+    &__author-position {
+        margin-top: var(--blockquote-author-position-offset, .8rem);
+        color: var(--color-text-gray, #768490);
+    }
+}

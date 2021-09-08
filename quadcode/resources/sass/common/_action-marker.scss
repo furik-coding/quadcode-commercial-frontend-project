@@ -1,0 +1,13 @@
+.action-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.5rem;
+    height: 5.5rem;
+    background: var(--color-highlight);
+    color: var(--color-app-background);
+
+    svg {
+        width: 33%;
+    }
+}

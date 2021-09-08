@@ -1,0 +1,30 @@
+@import "../variables";
+
+// var() color generator
+@mixin generate($var-prefix, $array) {
+    @each $item, $value in $array {
+        --#{$var-prefix}-#{$item}: #{$value};
+    }
+}
+
+@mixin as-container() {
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--container-padding);
+}
+
+@mixin styled-scrollbar() {
+    &::-webkit-scrollbar {
+        width: 0.6rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: var(--color-line); 
+    }
+}

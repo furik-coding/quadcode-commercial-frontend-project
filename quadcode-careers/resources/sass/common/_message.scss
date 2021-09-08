@@ -1,0 +1,18 @@
+.message {
+    display: flex;
+    flex-flow: column;
+    max-width: 54rem;
+    margin: auto;
+    padding: 1rem 0 3rem 0;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 4rem;
+        font-size: var(--typo-headline3);
+        font-weight: 600;
+    }
+
+    &__text {
+        margin-bottom: 6rem;
+    }
+}

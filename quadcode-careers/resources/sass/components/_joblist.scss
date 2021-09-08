@@ -1,0 +1,24 @@
+@import "../variables";
+
+.joblist {
+    padding: var(--joblist-padding, 3rem);
+    min-height: 300px;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+    background: var(--color-app-background);
+    box-shadow: 0 .4rem 1.2rem rgba(118, 132, 144, 0.14);
+
+    @media (min-width: $screen-tablet) {
+        --joblist-padding: 5rem;
+    }
+
+    @media (min-width: $screen-desktop) {
+        --joblist-padding: 5rem 6rem;
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+}

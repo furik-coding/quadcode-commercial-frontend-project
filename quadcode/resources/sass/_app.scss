@@ -1,0 +1,70 @@
+@import "base/mixins";
+@import "variables";
+
+:root {
+    @include generate(color, $pallete);
+
+    --container-padding: 2.5rem;
+    --container-max-width: max(370px, 90%);
+    --overlap-value: 2rem;
+
+    font-size: var(--rem-value, 10px); // easy 'rem' using. no calculations
+    font-family: var(--font-primary);
+    scroll-behavior: smooth;
+
+    @media (min-width: $screen-tablet) {
+        --container-max-width: 718px;
+        --container-padding: #{$container-padding};
+    }
+
+    @media (min-width: $screen-desktop) {
+        --container-max-width: 960px;
+        --container-max-width: #{$container-total-width};
+    }
+
+    @media (min-width: $screen-full-hd) {
+        --rem-value: 11px;
+    }
+
+    @media (min-width: $screen-2k) {
+        --rem-value: 12px;
+    }
+
+    @media (min-width: $screen-4k) {
+        --rem-value: 13px;
+    }
+}
+
+:root {
+    --font-primary: 'Proxima Nova', sans-serif;
+    --typo-headline: 3.2rem;
+    --typo-headline2: 2.8rem;
+    --typo-subtitle: 2rem;
+    --typo-base: 1.6rem;
+    --typo-caption: 1.2rem;
+    --shadow-1: 0 0 .8rem 0px rgba(0, 0, 0, 0.2);
+    --shadow-2: 0 1.2rem 1.2rem rgba(118,132,144,0.15);
+}
+
+body {
+    background-color: var(--color-app-background);
+    font-size: var(--typo-base);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+}
+
+.container {
+    @include as-container();
+}
+
+.app-inner {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.app-content {
+    flex: 1;
+}

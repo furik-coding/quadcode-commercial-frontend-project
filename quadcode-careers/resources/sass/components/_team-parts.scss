@@ -1,0 +1,47 @@
+.team-parts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+
+    @media (min-width: $screen-mobile) {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 15rem));
+    }
+
+    &__value {
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+
+        @media (max-width: $screen-tablet) {
+            font-size: 64px;
+        }
+
+        img {
+            margin: auto;
+        }
+    }
+
+    &__name {
+        color: var(--color-blockquote-text);
+        text-align: center;
+    }
+}
+
+.team-parts-slider {
+    @media (max-width: $screen-tablet) {
+        .slider-arrow {
+            display: none !important;
+        }
+
+        .slider-nav {
+            .slick-slide {
+                width: 65px !important;
+                margin: 0 10px !important;
+            }
+
+            &__item {
+                margin: 0;
+            }
+        }
+    }
+}

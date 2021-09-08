@@ -1,0 +1,104 @@
+{
+  "name": "quadcode",
+  "version": "1.0.0",
+  "description": "Software Brand Site",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --progress --config webpack/webpack.dev.config.js",
+    "build": "webpack --config webpack/webpack.prod.config.js",
+    "lint": "eslint src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.mobbtech.com:frontend/quadcode.git"
+  },
+  "author": "Ivan Gimadeev",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@emotion/core": "^10.0.15",
+    "@emotion/is-prop-valid": "^0.8.2",
+    "@emotion/styled": "^10.0.15",
+    "@loadable/component": "^5.10.2",
+    "emotion-normalize": "^10.1.0",
+    "emotion-theming": "^10.0.14",
+    "history": "^4.9.0",
+    "lodash": "^4.17.15",
+    "pascal-case": "^2.0.1",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-cookie": "^4.0.1",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-map-gl": "4.0.0",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.1",
+    "react-scroll": "^1.7.13",
+    "react-spring": "^8.0.27",
+    "react-transition-group": "^4.3.0",
+    "react-visibility-sensor": "^5.1.1",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "svg-baker-runtime": "^1.4.3",
+    "svg-sprite-loader": "^4.1.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-emotion": "^10.0.16",
+    "babel-register": "^6.26.0",
+    "base64-inline-loader": "^1.1.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^18.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-emotion": "^10.0.14",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-lodash": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.0.0-beta.1",
+    "imagemin-webp-webpack-plugin": "^3.2.1",
+    "lint-staged": "^9.2.5",
+    "path": "^0.12.7",
+    "prettier": "^1.18.2",
+    "raf": "^3.4.1",
+    "react-dev-utils": "^9.0.4",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.1.0",
+    "webpack": "^4.39.3",
+    "webpack-bundle-analyzer": "^3.4.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "peerDependencies": {
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}

@@ -1,0 +1,23 @@
+img {
+    display: block;
+    max-width: 100%;
+    border-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: var(--hover-decoration, none);
+    }
+
+    &.link {
+        --hover-decoration: underline;
+        color: var(--color-link);
+    }
+}
+
+p {
+    margin: 0;
+}

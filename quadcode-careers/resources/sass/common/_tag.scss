@@ -1,0 +1,35 @@
+.tag {
+    display: inline-flex;
+    min-width: 13rem;
+    padding: 0 1rem;
+    border-radius: 15px;
+    align-items: center;
+    background: #F8FAFB;
+    font-size: var(--typo-caption);
+    justify-content: flex-start;
+    height: 30px;
+
+    &__control {
+        margin-right: 1rem;
+        color: var(--tag-icon-color,var(--color-text-primary));
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-top: 1px;
+        }
+
+        &:hover {
+            --tag-icon-color: var(--color-highlight);
+            cursor: pointer;
+        }
+    }
+
+    &__value {
+        font-size: 1.4rem;
+        color: var(--tag-text-color, var(--color-text-primary));
+    }
+}

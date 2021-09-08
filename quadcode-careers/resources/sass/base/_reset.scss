@@ -1,0 +1,31 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    outline: none !important;
+}
+
+html {
+    line-height: 1.375;
+    -webkit-text-size-adjust: 100%;
+}
+
+body,
+html {
+    margin: 0;
+    height: 100%;
+}
+
+h1 {
+    line-height: 1.15;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+}

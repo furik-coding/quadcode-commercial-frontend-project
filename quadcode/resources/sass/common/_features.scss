@@ -1,0 +1,51 @@
+.features-section {
+    @media (max-width: $screen-mobile) {
+        
+    }
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: var(--features-top-offset, 0);
+
+    @media (min-width: $screen-tablet) {
+        --features-top-offset: 5rem;
+        
+    }
+
+    &__item {
+        display: flex;
+        flex-flow: column;
+        flex-basis: 20rem;
+        align-items: center;
+        max-width: 30rem;
+        margin: 0 1rem;
+
+        @media (min-width: $screen-tablet) {
+            flex: 1;
+        }
+    }
+    
+    &__item + &__item {
+        @media (max-width: $screen-tablet) {
+            margin-top: 6rem;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 3rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: var(--typo-subtitle);
+        font-weight: bold;
+    }
+
+    &__text {
+        text-align: center;
+    }
+} 

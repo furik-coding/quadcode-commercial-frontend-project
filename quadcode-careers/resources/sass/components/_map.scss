@@ -1,0 +1,159 @@
+.map {
+    --map-marker-size: 1rem;
+    --map-layer-width: clamp(300px, 100vw, 144rem);
+
+    padding-top: 6rem;
+
+    @media (min-width: $screen-desktop) {
+        position: relative;
+        height: clamp(60rem, 100vh, 78rem);
+        padding-top: 16.4rem;
+        overflow: hidden;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: column;
+
+        @media (min-width: $screen-desktop) {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            height: 100%;
+        }
+    }
+
+    .app-section {
+        &__inner {
+            @media (max-width: $screen-desktop) {
+                order: -1;
+            }
+
+            @media (min-width: $screen-desktop) {
+                position: relative;
+                z-index: 1;
+                grid-area: 1/1/-1/5;
+                height: 100%;
+            }
+        }
+
+        &__header {
+            @media (min-width: $screen-desktop) {
+                text-align: left;
+            }
+        }
+    }
+
+    &__coords {
+        @media (min-width: $screen-desktop) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            z-index: 5;
+            width: var(--map-layer-width);
+            transform: translateX(-50%);
+
+            &-city {
+                position: absolute;
+                top: calc(var(--y-coord) * 1%);
+                left: calc(var(--x-coord) * 1%);
+                display: flex;
+                align-items: center;
+                transform: translate(calc(-1 * var(--map-marker-size) / 2), -50%);
+                cursor: pointer;
+
+                &:hover {
+                    --animation: pulse 1s linear infinite;
+                }
+            }
+        }
+
+        @media (max-width: $screen-desktop) {
+            &-city {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-template-areas: 'marker name''data-description data-description';
+                align-items: center;
+                margin-top: 1.6rem;
+
+                &:after {
+                    content: attr(data-description);
+                    grid-area: data-description;
+                    font-size: var(--typo-caption);
+                }
+            }
+        }
+
+        &-city-marker {
+            position: relative;
+            width: var(--map-marker-size);
+            height: var(--map-marker-size);
+            margin-right: 1.5rem;
+            border-radius: 50%;
+            background: var(--color-highlight);
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: var(--map-marker-size);
+                height: var(--map-marker-size);
+                margin: auto;
+                background: var(--color-highlight);
+                border-radius: 50%;
+                transform: scale(0.5);
+                transform-origin: center center;
+                animation: var(--animation, none);
+            }
+
+            &:after {
+                animation-delay: .4s;
+            }
+        }
+    }
+
+    &__media {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        width: var(--map-layer-width);
+        transform: translateX(-50%);
+
+        img {
+            height: 100%;
+        }
+
+        @media (max-width: $screen-desktop) {
+            display: none;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    70% {
+        opacity: 0.09;
+    }
+
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,64 @@
+.app-section {
+    margin-top: var(--section-top-offset, 0);
+    padding: var(--section-padding, 10rem 0);
+    background-color: var(--section-bg-color, var(--color-app-background));
+    background-image: var(--section-bg, none);
+    background-size: cover;
+    color: var(--section-text-color, var(--color-text-primary));
+
+    @media (max-width: $screen-tablet) {
+        --section-padding: 8rem 0;
+    }
+
+    &.is-rounded {
+        border-radius: 2rem;
+    }
+
+    &.is-full-height {
+        height: clamp(60rem, 100vh, 108rem);
+    }
+
+    &.is-full-height-desktop {
+        @media (min-width: $screen-desktop) {
+            height: clamp(60rem, 100vh, 108rem);
+        }
+    }
+
+    &.is-overlap {
+        position: relative;
+        top: calc(-1 * var(--overlap-value));
+        
+
+        & + .app-section {
+            margin-top: calc(-2 * var(--overlap-value));
+        }
+    }
+
+    &.is-button-section {
+        --section-padding: 3rem 0;
+    }
+
+    &__anchor {
+        transform: translateY(-300px);
+    }
+
+    &__header {
+        margin-bottom: 2rem;
+        text-align: center;
+
+        h1 {
+            font-size: var(--typo-headline);
+            font-weight: var(--section-header-weight, 600);
+            text-align: inherit;
+        }
+    }
+
+    &__text {
+        max-width: 62rem;
+        text-align: center;
+
+        @media (max-width: $screen-tablet) {
+            text-align: left;
+        }
+    }
+}

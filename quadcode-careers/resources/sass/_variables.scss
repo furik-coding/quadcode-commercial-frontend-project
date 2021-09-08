@@ -1,0 +1,30 @@
+// App layout
+$container-max-width: 102rem;
+$container-padding: 1rem;
+$container-total-width: $container-max-width + $container-padding * 2;
+
+// Base Breakpoints
+$screen-mobile: 376px;
+$screen-tablet: 700px;
+$screen-desktop: 1200px;
+$screen-desktop-l: 1400px;
+$screen-full-hd: 1950px;
+$screen-2k: 2250px;
+$screen-4k: 2700px;
+
+// Color
+$pallete: (
+    app-background: rgb(255, 255, 255),
+    page-background: rgb(248, 250, 251),
+    back-background: rgba(#979797, 15%),
+    text-primary: #2A3540,
+    text-secondary: #768490,
+    text-gray: #768490,
+    text-light: #ffffff,
+    blockquote-text: #323E48,
+    highlight: #F1162F,
+    link: #25a6d2,
+    placeholder: rgba(19, 44, 63, .6),
+    line: rgb(237, 242, 245),
+    line-dark: rgb(116, 121, 123),
+);

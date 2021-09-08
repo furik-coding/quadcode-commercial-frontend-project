@@ -1,0 +1,25 @@
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.hide-on-desktop {
+    @media (min-width: $screen-desktop) {
+        display: none !important;
+    }
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-underline {
+    text-decoration: underline;
+}

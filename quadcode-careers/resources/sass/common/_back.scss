@@ -1,0 +1,26 @@
+.go-back {
+    display: inline-flex;
+    align-items: center;
+    // margin-bottom: var(--go-back-offset, 6rem);
+    padding: .9rem 2rem;
+    border-radius: 3rem;
+    background: var(--color-back-background);
+    color: var(--color-text-light);
+    font-size: var(--typo-base);
+    margin-bottom: 5rem;
+
+    &:before {
+        content: '';
+        width: 1.5rem;
+        height: 1.1rem;
+        margin-right: 1rem;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='15px' height='11px' viewbox='0 0 15 11' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5 5L0 10' transform='matrix(-1 -8.742278E-08 8.742278E-08 -1 5.5 10.5)' id='Stroke-1' fill='none' fill-rule='evenodd' stroke='%23FFFFFF' stroke-width='1' /%3E%3Cpath d='M0 0.170732C0 0.170732 14 0.170732 14 0.170732' transform='matrix(-1 -8.742278E-08 8.742278E-08 -1 14.5 5.6706543)' id='Stroke-3' fill='none' fill-rule='evenodd' stroke='%23FFFFFF' stroke-width='1' /%3E%3C/svg%3E");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &:hover {
+        filter: contrast(1.5);
+    }
+}

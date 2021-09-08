@@ -1,0 +1,18 @@
+.like-btn {
+    display: inline-flex;
+    justify-content: center;
+    padding: var(--btn-padding, 2rem 4rem);
+    background: var(--btn-background, var(--color-highlight));
+    color: var(--btn-text-color, var(--color-text-light));
+    text-align: center;
+    cursor: pointer;
+    transition: filter .2s;
+
+    @media (max-width: $screen-desktop) {
+        min-width: min(100%, 32rem);
+    }
+
+    &:hover {
+        filter: contrast(1.2);
+    }
+}

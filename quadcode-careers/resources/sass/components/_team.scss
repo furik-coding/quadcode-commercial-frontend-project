@@ -1,0 +1,215 @@
+@import "../variables";
+
+.team {
+    --slide-template-areas: 'image''description';
+    --slide-template-columns: 100%;
+    --slide-gap: 2rem;
+    --slide-height: initial;
+    --slide-image-height: 37rem;
+    --slide-image-width: 31rem;
+
+    @media (max-width: $screen-tablet) {
+        --blockquote-bg: none;
+        --blockquote-padding-top: 0;
+        --blockquote-padding-left: 0;
+        --blockquote-author-offset: 4rem;
+        --blockquote-author-position-offset: 0;
+    }
+
+    @media (min-width: $screen-tablet) {
+        --slide-template-columns: 1fr 1fr;
+        --slide-template-areas: 'description image';
+        --slide-gap: 8rem;
+        --slide-height: auto;
+        --slide-image-height: 44rem;
+        --slide-image-width: 28rem;
+    }
+
+    @media (min-width: $screen-desktop) {
+        --slide-image-height: 57rem;
+        --slide-image-width: 48rem;
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    .team-slider {
+        &__item-inner {
+            display: grid;
+            grid-template-columns: var(--slide-template-columns);
+            grid-template-areas: var(--slide-template-areas);
+            align-items: center;
+            gap: var(--slide-gap);
+            height: var(--slide-height);
+
+        }
+
+        &__item-description {
+            grid-area: description;
+
+            @media (min-width: $screen-tablet) {
+                align-self: center;
+            }
+        }
+
+        &__item-image {
+            grid-area: image;
+            overflow: hidden;
+            width: var(--slide-image-width);
+            height: var(--slide-image-height);
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .team-slider-nav {
+        margin-top: 4rem;
+
+        @media (min-width: $screen-desktop) {
+            margin-top: 5.7rem;
+        }
+
+        &__item {
+            max-width: 14rem;
+            margin: 0 1.5rem;
+            cursor: pointer;
+        }
+
+        &__item-marker {
+            height: 0.5rem;
+            background-color: var(--current-slide-marker-color, var(--color-line));
+            transition: background-color .25s;
+        }
+
+        &__item-name {
+            margin-top: 0.8rem;
+            color: var(--current-slide-text-color, var(--color-text-gray));
+            transition: color .25s;
+
+            @media (max-width: $screen-desktop) {
+                display: none;
+            }
+        }
+
+        .slick-track {
+            display: flex;
+            justify-content: center;
+            transform: none !important; // smoother view
+
+            &:before,
+            &:after {
+                display: none; // we dont need it
+            }
+
+            // Current element
+            .slick-current {
+                --current-slide-marker-color: var(--color-highlight); //  &__item-marker
+                --current-slide-text-color: var(--color-text-primary); // &__item-name
+            }
+        }
+    }
+
+    .team-slider-arrow {
+        --arrow-offset-x: calc(var(--container-padding) * -1);
+        --arrow-offset-y: calc(var(--slide-image-height) / 2);
+
+        position: absolute;
+        top: var(--arrow-offset-y);
+        width: 55px;
+        height: 55px;
+        display: block;
+        background-color: var(--color-highlight);
+        background-image: url("/files/icons/left_white_arr.svg");
+        background-size: auto 14px;
+        background-repeat: no-repeat;
+        background-position: 20px 21px;
+        transition: .3s all ease;
+        cursor: pointer;
+
+        
+        @media (max-width: $screen-tablet) {
+            display: none;
+        }
+
+    
+
+        @media (min-width: $screen-tablet) {
+            --arrow-offset-x: calc((var(--container-padding) + 2vw) * -1);
+            --arrow-offset-y: 50%;
+        }
+
+        @media (min-width: $screen-desktop) {
+            --arrow-offset-x: -7rem;
+        }
+
+        &.as-prev-btn {
+            left: var(--arrow-offset-x);
+            transform: translateY(-25px);
+            background-position: 20px center;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                max-height: 0;
+                max-width: 0;
+                top:26.5px;
+                left: 21px;
+                background: #fff;
+                border: 1px solid #fff;
+                border-right: 0;
+                border-left: 0;
+                transition: 0.3s all ease;
+                display: block;
+            }
+    
+            &:hover {
+                background-position: 16px center;
+    
+                &::before {
+                    max-width: 15px;
+                    left: 18px;
+                }
+            }
+        }
+    
+        &.as-next-btn {
+            right: var(--arrow-offset-x);
+            transform: translateY(-25px);
+            background-image: url("/files/icons/right_white_arr.svg");
+            background-position: 25px center;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                max-height: 0;
+                max-width: 0;
+                top:26.5px;
+                right: 25px;
+                background: #fff;
+                border: 1px solid #fff;
+                border-right: 0;
+                border-left: 0;
+                transition: 0.3s all ease;
+                display: block;
+            }
+    
+            &:hover {
+                background-position: 29px center;
+    
+                &::before {
+                    max-width: 15px;
+                    right: 20px;
+                }
+            }
+        }
+    }
+}

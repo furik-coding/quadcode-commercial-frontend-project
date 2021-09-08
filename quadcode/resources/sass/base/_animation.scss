@@ -1,0 +1,97 @@
+[data-animation],
+[data-animation-childs] > * {
+    animation: var(--anim-name, none) var(--anim-final-state, forwards);
+    animation-duration: var(--anim-duration, 0.33s);
+    animation-delay: calc(
+        var(--anim-duration, 0.25s) * var(--anim-index, 1) + var(--anim-delay, 0s)
+    );
+    animation-play-state: paused;
+
+    .play-anim & {
+        animation-play-state: running;
+    }
+}
+
+
+[data-animation*="fade"],
+[data-animation-childs*="fade"] > * {
+	opacity: 0;
+}
+
+[data-animation*="fadein"],
+[data-animation-childs*="fadein"] > * {
+	--anim-name: fadein;
+}
+
+* [data-animation="fadeinleft"],
+[data-animation-childs="fadeinleft"] > * {
+	--anim-name: fadeinleft;
+}
+
+[data-animation="fadeinright"],
+[data-animation-childs="fadeinright"] > * {
+	--anim-name: fadeinright;
+}
+
+[data-animation="fadeintop"],
+[data-animation-childs="fadeintop"] > * {
+	--anim-name: fadeintop;
+}
+
+[data-animation="fadeinbottom"],
+[data-animation-childs="fadeinbottom"] > * {
+	--anim-name: fadeinbottom;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeinleft {
+	from {
+		opacity: 0;
+		transform: translateX(-20%);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeinright {
+	from {
+		opacity: 0;
+		transform: translateX(20%);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeintop {
+	from {
+		opacity: 0;
+		transform: translateY(-20%);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeinbottom {
+	from {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}

@@ -1,0 +1,91 @@
+@import "../variables";
+
+.category-page {
+    --category-header-height: 39rem;
+    --category-content-offset: 5rem;
+    
+    @media (max-width: $screen-desktop) {
+        --container-max-width: 100%;
+        --container-padding: 0;
+    }
+
+    @media (min-width: $screen-desktop) {
+        --category-header-height: 65rem;
+        --category-content-offset: 24rem;
+    }
+
+    // For 'Search jobs' page
+    &.for-search-jobs {
+        --category-header-height: 34rem;
+
+        @media (min-width: $screen-desktop) {
+            --category-header-height: 45rem;
+            --category-content-offset: 4rem;
+        }
+    }
+
+    &__header {
+        height: var(--category-header-height);
+        padding-top: calc(var(--category-content-offset) / 2);
+        background-color: var(--color-placeholder);
+        background-image: linear-gradient(rgba(#0F161D, 60%), rgba(#0F161D, 60%)), var(--category-page-bg, linear-gradient(rgb(19, 44, 63) 0, rgb(255,255,255, 0) 15rem));
+        background-size: cover;
+        color: var(--color-text-light);
+        font-size: var(--typo-headline);
+        border-radius: 0 0 2rem 2rem;
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding-bottom: var(--category-content-offset);
+        }
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 1rem;
+        color: var(--color-text-light);
+        font-size: var(--typo-subtitle);
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+        justify-items: center;
+        width: 100%;
+        margin-top: 4rem;
+
+        @media (max-width: $screen-tablet) {
+            grid-template-columns: 1fr 2fr;
+
+            justify-content: space-between;
+        }
+
+        @media (min-width: $screen-tablet) {
+            & > :first-child {
+                justify-self: start;
+            }
+        }
+        
+    }
+
+    &__content {
+        margin-top: calc(var(--category-content-offset) * -1);
+
+        .go-back {
+            @media (max-width: $screen-desktop) {
+                display: none;
+            }
+        }
+    }   
+}
